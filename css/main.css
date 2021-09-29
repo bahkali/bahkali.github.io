@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+}
+.video-container {
+  position: relative;
+}
+#video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+.video-content {
+  width: 100%;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  z-index: 10;
+}
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
