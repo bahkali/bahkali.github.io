@@ -2,6 +2,13 @@
   margin: 0;
 }
 
+section {
+  margin: 20px 0;
+}
+.column_tall {
+  padding-top: 3.5%;
+  height: 450px;
+}
 /* video background */
 #background-video {
   width: 100vw;
@@ -17,11 +24,22 @@
 /* Texts over the video */
 .Video_Text {
   background: rgba(0, 0, 0, 0.5);
-  color: white;
-  width: 100vw;
-  height: 100vh;
-  padding: 20px;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
   position: absolute;
+}
+.Video_Text h1 {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.Video_Text p {
+  font-size: 1.1em;
+  margin-top: 20px 0;
+  font-weight: 400;
 }
 @media (max-width: 750px) {
   #background-video {
@@ -33,8 +51,8 @@
   }
 }
 main {
-  background-color: rgb(234, 241, 243);
-  margin-top: 50vh;
+  background-color: #393c3f;
+  margin-top: 60vh;
   padding: 10px;
   position: relative;
 }
@@ -50,4 +68,50 @@ main {
   .flex-md-equal > * {
     flex: 1;
   }
+}
+
+/* Image elements */
+section img {
+  border-radius: 8px; /* Gives all images slightly rounded corners */
+  max-width: 100%; /* Ensures all images stay within the width of their container */
+  height: 340px; /* Sets the height of all images */
+  display: block; /* By specifying block display we can ensure our images are able to be centered */
+  margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
+  margin-right: auto;
+}
+
+/* Image element hover effects */
+section img:hover {
+  transition: transform 1s; /* Transition lasts 1 second */
+  transform: scale(1.1); /* Image is increased slightly when hovered over */
+}
+
+/*  
+ Gallery
+ */
+.section-c .gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.section-c .gallery a:first-child {
+  /* grid-row-start: 1;
+  grid-row-end: 3; */
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+
+.section-c .gallery a:nth-child(2) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.section-c .gallery img,
+.section-c .gallery a {
+  width: 100%;
+  height: 100%;
+}
+
+/* Styling for footer element */
+footer {
+  padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
 }
