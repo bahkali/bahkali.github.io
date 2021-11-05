@@ -14,6 +14,7 @@
     />
 
     <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./js/main.js"></script>
     <title>Kaly Bah</title>
   </head>
   <body>
@@ -25,10 +26,11 @@
               </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" class="active" aria-current="page" href="#">Home</a>
               <a class="nav-link" href="#About">About</a>
               <a class="nav-link" href="#Github">Github</a>
-              <a class="nav-link" href="#Contact">Contact</a>
+              <a class="nav-link" href="#Slideshow">SlideShow</a>
+              <a class="nav-link" onclick="openForm()" ondblclick="closeForm()" href="#Contact">Contact</a>
             </div>
           </div>
         </div>
@@ -48,8 +50,8 @@
         <div class="container">
         <div class="row align-items-center">
             <div class="col-9">
-                <h1>Hi, my name is <br>Kaly Bah</h1>
-                <h3>I'm a software Developer</h3>
+                <h1>Hi, my name is Kaly Bah</h1>
+                <p>I'm a software Developer. Welcome to my portfolio website. <br> On it , I will tell you about my background and experience. </p>
             </div>
            
         </div>
@@ -126,39 +128,39 @@
       <div id="Slideshow_Container">
           <!-- Slide 1 of 6 -->
           <div class="mySlides fade">
-              <img class="Slideshow_Images" src="images/Square Personal Photo.png" alt="Picture of yourself">
+              <img class="Slideshow_Images" src="./img/profile.jpg" alt="Picture of yourself">
               <div class="text">I'm available to assist you on your project!</div>
           </div>
           <!-- Slide 2 of 6 -->
           <div class="mySlides fade">
-              <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos"> 
+              <img class="Slideshow_Images" src="./img/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos"> 
               <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
           </div>
           <!-- Slide 3 of 6 -->
           <div class="mySlides fade">
-              <img class="Slideshow_Images" src="images/Python.png" alt="Python logo">
+              <img class="Slideshow_Images" src="./img/Python.png" alt="Python logo">
               <div class="text">the popular programming language Python,</div>
           </div>
           <!-- Slide 4 of 6 -->
           <div class="mySlides fade">
-              <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C# logo">
+              <img class="Slideshow_Images" src="./img/C_Sharp_and_Dot_NET.png" alt="C# logo">
               <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
           </div>
           <!-- Slide 5 of 6 -->
           <div class="mySlides fade">
-              <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL logo"> 
+              <img class="Slideshow_Images" src="./img/SQL_and_Database.jpg" alt="SQL logo"> 
               <div class="text">back end development, databases and SQL.</div>
           </div>
           <!-- Slide 6 of 6 -->
           <div class="mySlides fade">
-              <img class="Slideshow_Images" src="images/Square Custom Picture.png" alt="Replace with a picture of your choosing"> 
+              <img class="Slideshow_Images" src="./img/Square Personal Photo.png" alt="Replace with a picture of your choosing"> 
               <div class="text"><a class="white-text" onclick="openForm()" href="#Contact">Contact me now!</a></div> 
           </div>
           <!-- Previous and next buttons -->
           <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
           <a class="Next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-      <br> <!-- Adds a space between the slideshow images and the dots -->
+      <br> 
 
       <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
       <div style="text-align: center">
@@ -195,7 +197,7 @@
 </div>
 
     <!--Footer section-->
-    <footer class="text-white">
+    <footer class="">
         <p>
             <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">Kaly Bah</a></p>
             <br>
