@@ -35,14 +35,16 @@ section {
   bottom: 0;
   z-index: -1;
 }
+
 /* Texts over the video */
 .Video_Text {
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  padding: 20px 0;
-  position: absolute;
+  /* background: rgba(0, 0, 0, 0.5); This provides a semi-transparents background for the text to sit over */
+  color: white; /* Makes the font color white */
+  width: 100%; /* Ensures the video-text container fills the width of the video */
+  padding-top: 15vh; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
+  position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
+  -webkit-animation: moveVideoText 3.75s; /* Animation for Safari 4.0 - 8.0 */
+  animation: moveVideoText 3.75s; /* moveVideoText animation set to 5.75s to match the movenavText animation */
 }
 h1 {
   font-size: 3em;
@@ -74,7 +76,7 @@ h1:hover {
 }
 main {
   background-color: #393c3f;
-  margin-top: 60vh;
+  margin-top: 50vh;
   padding: 10px;
   position: relative;
 }
@@ -146,59 +148,6 @@ footer {
 }
 /* ====================================================== */
 /***** Navbar Styling *****/
-.Navbar {
-  overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-  background-color: black; /* This colors the navbar black */
-  position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
-  top: 0; /* This ensures no space is displayed above the navbar */
-  width: 100%; /* This makes the navbar span the entire width of the page */
-  z-index: 1; /* This ensures other elements don't display over the navbar */
-  -webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
-  animation: moveNav 5s; /* This makes the moveNav animation last 5 seconds */
-}
-
-/* The animation effect for moving the nav bar in from above the left of the screen on page load */
-@keyframes moveNav {
-  from {left: -100vw;} /* The navbar is starting off screen to the left */
-  to { left: 0vw;} /* This moves the navbar into place on the screen */
-}
-
-/*Navbar Links */
-.Navbar a {
-  float: left; /* This specifies that the text floats on the left on the navbar */
-  display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-  color: white; /* This is the font color for text on our navbar */
-  padding: .75vw 1vw; /* This adds padding around our text */
-  text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-  font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
-  font-size: 1.5vw; /* This specifies the font size for text on our navbar */
-  text-align: center; /* This centers the text within its container */
-  position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-  -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
-  animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */ 
-}
-
-/* The animation effect for moving the nav bar links in from above the top of the screen on page load */
-@keyframes moveNavText {
-  from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
-  to {top: 0vw;} /* This lowers the navbar text onto the navbar */
-}
-
-/* Screens 576px and smaller will display navbar links equally distributed */
-@media screen and (max-width: 576px) {
-  .Navbar a{
-      width: 20%; /* This sets each navbar link to 1/5 of the navbar */
-      font-size: 12px;
-  }
-}
-
-/*Navbar hover effects */
-.Navbar a:hover {
-  background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
-  color: black; /* This defines the font color that will display when navbar a elements are hovered over */
-  font-weight: bold; /* This makes the text on the navbar bold when hovered over */
-  cursor: pointer;
-}
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
@@ -223,17 +172,7 @@ footer {
   }
 }
 
-/* Texts over the video */
-/* .Video_Text {
-  background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparents background for the text to sit over */
-  color: white; /* Makes the font color white */
-  width: 100%; /* Ensures the video-text container fills the width of the video */
-  height: 100vh; /* This ensures the video-text container fills the height of the viewport so that the slideshow is not partially displayed */
-  padding-top: 2vh; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
-  position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-  -webkit-animation: moveVideoText 5.75s; /* Animation for Safari 4.0 - 8.0 */
-  animation: moveVideoText 5.75s; /* moveVideoText animation set to 5.75s to match the movenavText animation */
-} */
+
 
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
 @keyframes moveVideoText {
@@ -245,10 +184,12 @@ footer {
 /***** Slideshow Styling *****/
 #Slideshow_Background {
   background: rgba(255, 255, 255, 0.35); /* This creates a slightly transparent white background that's palced over the video in the background */    
+  background: url(../img/bg1.jpg) 50% 0 fixed;
+  background-size: cover;
 }
 
 .mySlides{
-  display: none; /* This prevents the images from being displayed, we will use JS to display these */
+   display: none; /*This prevents the images from being displayed, we will use JS to display these */
 }
 
 /* Slideshow section / container */
@@ -330,21 +271,21 @@ footer {
 }
 
 /* Fading animation for slideshow */
-.fade {
-  animation-name: fade; /* Fade animation is defined below */
+.fadeI {
+   animation-name: fadeI; /* Fade animation is defined below */ */
   animation-duration: 1.5s; /* The animation lasts 1.5 seconds */
-  -webkit-animation-name: fade; /* Same as above for Safari 4.0-8.0 */
+  -webkit-animation-name: fadeI; /* Same as above for Safari 4.0-8.0 */
   -webkit-animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes fadeI {
   from {opacity: .4;} /* Image starts transparent */
-  to {opacity: 1;} /* Image ends opaque */
+  to {opacity: 1.5;} /* Image ends opaque */
 }
 
-@keyframes fade {
+@keyframes fadeI {
   from {opacity: .4;} /* Image starts transparent */
-  to {opacity: 1;} /* Image ends opaque */
+  to {opacity: 1.5;} /* Image ends opaque */
 }
 /***** End Slideshow Styling *****/
 
@@ -391,7 +332,7 @@ clear: both; /* This clears any other elements from floating on the left or the 
   position: fixed; /* The element is positioned relative to the viewport and stays in the same location no matter what */
   bottom: 1.75vw; /* Positions the button slightly up from the bottom of the viewport */
   right: 1.75vw; /* Positions the viewport slightly right from the side of the viewport */
-  width: 25vw; /* Sets the width relative to the viewport width */
+  width: 20vw; /* Sets the width relative to the viewport width */
   background-color: white; /* Sets the background color of the button to white */
   color: black; /* Sets the color of the button text to black */
   border: solid black; /* This makes a solid black border around the button */
@@ -442,9 +383,9 @@ clear: both; /* This clears any other elements from floating on the left or the 
 button {
   font-family: "Trebuchet MS", Optima;
   letter-spacing: .3vw; /* Adds slight spacing between the letters */
-  font-size: 1.5vw; /* Relative sizing of text */
+  font-size: 1vw; /* Relative sizing of text */
   font-weight: bold; 
-  padding: 1.5vw; /* Adds padding to the text in the button */
+  padding: 1vw; /* Adds padding to the text in the button */
   cursor: pointer; /* Changes the cursor to pointer over button elements */
   width: 100%; /* Sets the width of the buttons to 100% of their containers */
   height: auto; /* Allows the height to be resized depending on the content showing */
