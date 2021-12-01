@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -12,7 +13,8 @@ body {
   transition: 3s opacity;
   letter-spacing: 0.2vw;
   font-family: Avant Garde, Helvetica, sans-serif;
-  /* font-size: 1.5vw; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1vw;
   /* overflow: hidden; */
 }
 

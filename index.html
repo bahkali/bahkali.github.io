@@ -12,7 +12,11 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="./css/main.css" />
     <script defer src="./js/main.js"></script>
     <title>Kaly Bah</title>
@@ -28,6 +32,7 @@
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
               <a class="nav-link" href="#About">About</a>
+              <a href="#portfolio" class="nav-link">Portfolio</a>
               <a class="nav-link" href="#Github">Github</a>
               <a class="nav-link" href="#Slideshow">SlideShow</a>
               <a class="nav-link" onclick="openForm()" ondblclick="closeForm()" href="#Contact">Contact</a>
@@ -79,29 +84,99 @@
         </div>
 </section>
 
-<!-- Gallery -->
-<!-- <div class="section-c">
-    <div class="gallery">
-      <a href="https://i.ibb.co/CHLBZnp/gal2323.jpg" class="big"
-        ><img src="./img/Crown_Clothing frontPage.png" alt=""
-      /></a>
-      <a href="https://i.ibb.co/4pBbhfY/gal39834.jpg" class="big"
-        ><img src="./img/Face_Recognition_App.png" alt=""
-      /></a>
-      <a href="https://i.ibb.co/xSnHP7g/gal43884.jpg" class="big"
-        ><img src="./img/forkify app.png" alt=""
-      /></a>
-      <a href="https://i.ibb.co/QN6Bnrb/gal4958.jpg" class="big"
-        ><img src="https://i.ibb.co/QN6Bnrb/gal4958.jpg" alt=""
-      /></a>
-      <a href="https://i.ibb.co/dGZvj75/gal4545.jpg" class="big">
-        <img src="./img/forkify app.png" alt=""
-      /></a>
-      <a href="https://i.ibb.co/S6FVFNt/gal74744.jpg" class="big"
-        ><img src="https://i.ibb.co/S6FVFNt/gal74744.jpg" alt=""
-      /></a>
+<!-- Portfolio -->
+<div class="py-5 bg-" id="portfolio">
+  <div class="container">
+    <h1 class="display-4 text-white"> PORTFOLIO </h1>
+    <div class="row">
+      
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+              <a href="https://bit.ly/3EdR1TR">
+                <img style="width: 100%; height:225px; object-fit:scale-down;" src="./img/CarInsurance1.PNG" class="card-img-top" alt=""/>
+              </a>
+            <div class="card-body">
+              <h5 class="card-title">Car insurance App</h5>
+                <p class="card-text">
+                  MVC Web application that mimic a car insurance website. 
+                </p>
+            </div>
+        </div> 
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <a href="https://bit.ly/3ruoW7c">
+              <img style="width: 100%; height:225px;" src="./img/Face_Recognition_App.png" class="card-img-top" alt=""/>
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Face Recognition </h5>
+                <p class="card-text">
+                  Using React and Machine learning to detect face on photo uploaded.
+                </p>
+            </div>
+        </div> 
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+              <a href="https://github.com/bahkali/forklily">
+                <img style="width: 100%; height:225px;" src="./img/forkify app.png" class="card-img-top" alt=""/>
+              </a>
+            <div class="card-body">
+              <h5 class="card-title">forkify App</h5>
+                <p class="card-text">
+                  Web app built with React a REdux.
+                </p>
+            </div>
+        </div> 
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+              <a href="https://github.com/bahkali/crwn-clothing">
+                <img style="width: 100%; height:225px;" src="./img/Crown_Clothing frontPage.png" class="card-img-top" alt=""/>
+              </a>
+            <div class="card-body">
+              <h5 class="card-title">Crown Clothing App</h5>
+                <p class="card-text">
+                  Ecommer Web application built with React a REdux.
+                </p>
+            </div>
+        </div> 
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <a href="https://github.com/bahkali/mapty-project">
+              <img style="width: 100%; height:225px; " src="./img/Mapty.png" class="card-img-top" alt=""/>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Mapty App</h5>
+                <p class="card-text">
+                  This is a app that will help you map your workouts. Using Javascript and its libraries .
+                </p>
+            </div>
+        </div> 
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+              <a href="https://bit.ly/3G911yq">
+                <img style="width: 100%; height:225px; object-fit:contain;" src="./img/tictac.PNG" class="card-img-top" alt=""/>
+              </a>
+            <div class="card-body">
+              <h5 class="card-title">TIC TAC TOE Game</h5>
+                <p class="card-text">
+                  Tictactoe game built in mutliple version - Windows Form and Html with JavaScript.
+                </p>
+            </div>
+        </div> 
+      </div>
     </div>
-</div>  -->
+  </div>
+    
+</div>  
 
 <!--GitHub section-->
 <section class="row d-md-flex flex-md-equal w-100 my-md-3 ps-md-3" id="Github">
@@ -109,7 +184,7 @@
     <div class="col column_tall bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center">
         <h1>GitHub</h1>
         <p>
-            You can view my coding projects on my GitHub profile here:
+            You can view more of my coding projects on my GitHub profile here:
             <br>
             <p class="center"><a href="https://github.com/bahkali" target="_blank">My Github</a></p>
         </p>
@@ -193,7 +268,7 @@
     <!--Footer section-->
     <footer class="">
         <p>
-            <p class="center">&copy Prosper Consulting Inc., <a href="www.linkedin.com/in/kaly-mamadou" target="_blank">Kaly Bah</a></p>
+            <p class="center">&copy <a href="www.linkedin.com/in/kaly-mamadou" target="_blank">Kaly Bah</a></p>
             <br>
         </p>
     </footer>
