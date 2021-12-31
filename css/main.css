@@ -23,7 +23,8 @@ section {
 }
 .column_tall {
   padding-top: 3.5%;
-  height: 450px;
+  padding-bottom: 3.5%;
+  /*height: 450px;*/
 }
 /* video background */
 #background-video {
@@ -41,13 +42,19 @@ section {
 /* Texts over the video */
 .Video_Text {
   /* background: rgba(0, 0, 0, 0.5); This provides a semi-transparents background for the text to sit over */
-  color: white; /* Makes the font color white */
+  color: black; /* Makes the font color white */
   width: 100%; /* Ensures the video-text container fills the width of the video */
   padding-top: 15vh; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
   position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
   -webkit-animation: moveVideoText 3.75s; /* Animation for Safari 4.0 - 8.0 */
   animation: moveVideoText 3.75s; /* moveVideoText animation set to 5.75s to match the movenavText animation */
 }
+.hero-text {
+    background-color: white;
+    padding: 3.5%;
+    opacity: 0.9;
+}
+
 h1 {
   font-size: 3em;
   font-weight: 700;
@@ -86,9 +93,8 @@ main {
 /*
  * Extra utilities
  */
-
 .flex-equal > * {
-  flex: 1;
+    flex: 1;
 }
 @media (min-width: 768px) {
   .flex-md-equal > * {
@@ -98,12 +104,12 @@ main {
 
 /* Image elements */
 section img {
-  /* filter: grayscale(75%); */
-  border-radius: 8px; /* Gives all images slightly rounded corners */
-  max-width: 100%; /* Ensures all images stay within the width of their container */
-  height: 340px; /* Sets the height of all images */
-  display: block; /* By specifying block display we can ensure our images are able to be centered */
-  margin: auto; /* In combination with "margin-right: auto" this centers all images */
+    /* filter: grayscale(75%); */
+    border-radius: 8px; /* Gives all images slightly rounded corners */
+    max-width: 100%; /* Ensures all images stay within the width of their container */
+    /*height: 340px;  Sets the height of all images */
+    display: block; /* By specifying block display we can ensure our images are able to be centered */
+    margin: auto; /* In combination with "margin-right: auto" this centers all images */
 }
 
 /* Image element hover effects */
@@ -425,4 +431,18 @@ button:hover, .form-container .btn:hover {
   -webkit-transition-duration: 1s;
   border-color: black;
 }
-/***** End of Contact Form Styling *****
+/***** End of Contact Form Styling *****/
+
+.resume {
+  color: #DA946D;
+  border: solid 1px #c9c9c9;
+  padding: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font: 16px "open sans", sans serif;
+}
+
+.resume:hover {
+  color: #da7740;
+  border-color: #da7740;
+}
